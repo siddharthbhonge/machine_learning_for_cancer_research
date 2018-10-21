@@ -92,8 +92,21 @@ Labels are Place of origin and are one hot coded.
 These numpy arrays are feeded in batches using generator to CNN Model.<br />
 
 
+As the the distribution of classes is uneven,we put a hard threshold of 100.<br/>
+We excluded classes with less than 100 samples.<br />
+Feel free to change the threshold as per your model.<br />
 
+Distribution before threshold:
 
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_1.png)
+
+Example of Sparse Distribution:
+
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_2.png)
+
+Distribution after threshold:
+
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_3.png)
 
 
 ## Authors
