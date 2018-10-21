@@ -42,12 +42,12 @@ Download: <br />
 
 ```
 
-wget -c -t 0 https://gdc.cancer.gov/files/public/file/gdc-client_v1.3.0_OSX_x64.zip<br />
-Unzip:Unzip gdc-client_v1.3.0_OSX_x64.zip<br />
+wget -c -t 0 https://gdc.cancer.gov/files/public/file/gdc-client_v1.3.0_OSX_x64.zip
+Unzip:Unzip gdc-client_v1.3.0_OSX_x64.zip
 
 
-Download with gdc-client../<path-to-gdc-client>/gdc-client download –m <path-to-manifest-file><br />
-e.g. ./~/Downloads/gdc-client –m ~/Downloads/gdc_manifest.2018-08-23.txt<br />
+Download with gdc-client../<path-to-gdc-client>/gdc-client download –m <path-to-manifest-file>
+e.g. ./~/Downloads/gdc-client –m ~/Downloads/gdc_manifest.2018-08-23.txt
 ```
 
 
@@ -103,4 +103,4 @@ These numpy arrays are feeded in batches using generator to CNN Model.<br />
 
 ## Acknowledgments
 
-* https://github.com/yuesOctober/GDCproject/tree/yue
+* Yue Shi https://github.com/yuesOctober/GDCproject/tree/yue
