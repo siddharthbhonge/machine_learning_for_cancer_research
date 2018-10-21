@@ -1,8 +1,7 @@
 # miRNA Sequences to predict Primary Site/Origin of Cancer
-
-The miRNA expression quantification data is used https://gdc.cancer.gov/about
--
-data to predict site of origin of the disease.
+```
+The miRNA expression quantification data is used https://gdc.cancer.gov/about to predict site of origin of the disease.
+```
 
 
 ## Getting Started
@@ -12,38 +11,44 @@ compared to a simple SVM and Logistic Regression.
 
 ### Prerequisites
 
-1.Python 3.6 
-2.Tensorflow 1.5
-3.Keras 
-4.Scikit Learn
-5.pandas
+1.Python 3.6 <br />
+2.Tensorflow 1.5<br />
+3.Keras <br />
+4.Scikit Learn<br />
+5.pandas<br />
 
 
 ### Installing
 
 I.Download 
 Expression Quantification data: 
-miRNA sequence data
+miRNA sequence data<br />
 1.Go to the data portal https://portal.gdc.cancer.gov/repository, on the left side there are two 
-tabs: Files and Cases
-2.Click Cases and select a disease type: Liver Hepatocellular Carcinoma
+tabs: Files and Cases<br />
+2.Click Cases and select a disease type: Liver Hepatocellular Carcinoma<br />
 3.Click Files and select Data Category: Transcriptome Profiling Data type: 
-miRNA Expression Quantification
+miRNA Expression Quantification<br />
 Experimental Strategy:
-miRNA-Seq
-![alt text](https://drive.google.com/open?id=1vDlxzowPLaTKG4gRopcDEOhCOpG9nTu8)
-
+miRNA-Seq<br />
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/1.png)
+<br />
+<br />
 II.Click on the Manifest download. This will download the manifest file for use with GDC data transfer tool.
+<br />
+III.Data transfer tool Download: https://gdc.cancer.gov/access-data/gdc-data-transfer-tool<br />
+Download the version according to your OS type. <br />
+Command line to downloadand unzip a OSX version:  <br />
+Download: <br />
 
-III.Data transfer tool Download: https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
-Download the version according to your OS type. 
-Command line to downloadand unzip a OSX version:  
-Download: 
-wget -c -t 0 https://gdc.cancer.gov/files/public/file/gdc-client_v1.3.0_OSX_x64.zip
-Unzip:Unzip gdc-client_v1.3.0_OSX_x64.zi
+```
 
-Download with gdc-client../<path-to-gdc-client>/gdc-client download –m <path-to-manifest-file>
-e.g. ./~/Downloads/gdc-client –m ~/Downloads/gdc_manifest.2018-08-23.txt
+wget -c -t 0 https://gdc.cancer.gov/files/public/file/gdc-client_v1.3.0_OSX_x64.zip<br />
+Unzip:Unzip gdc-client_v1.3.0_OSX_x64.zip<br />
+
+
+Download with gdc-client../<path-to-gdc-client>/gdc-client download –m <path-to-manifest-file><br />
+e.g. ./~/Downloads/gdc-client –m ~/Downloads/gdc_manifest.2018-08-23.txt<br />
+```
 
 
 
@@ -51,13 +56,18 @@ e.g. ./~/Downloads/gdc-client –m ~/Downloads/gdc_manifest.2018-08-23.txt
 ## Running the tests
 
 1.Run check.py for checking if all the files have been downloaded.To download remaining ones use:
+```
+
 ./<path-to-gdc-client>/gdc-client download <id>
 e.g. ./gdc-client download fa63ce14-b9b5-4041-9df7-3b86ba9ede16 
+```
+<br />
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/3.png)
+2.Use parse_file_case_id.py to extract file and case ID's for further use.<br />
 
-2.Use parse_file_case_id.py to extract file and case ID's for further use.
-
-3.download the JSON format of the Data from the same website.Use parser.py for for parsing the data into labels and data.
-The data is converted into 10 Numpy arrays
+3.Download the JSON format of the Data from the same website.Use parser.py for for parsing the data into labels and data.<br />
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/2.png)
+The data is converted into 10 Numpy arrays<br />
 
 
 ```
@@ -69,44 +79,27 @@ batch_10.npy each of shape(1000 x 1822)(i.e 1000 samples each with 1822 features
 
 
 ```
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/4.png)
+
 Labels are Place of origin and are one hot coded.
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/5.png)
 
 
 ## Deployment
 
 
-These numpy arrays are feeded in batches using generator to CNN Model.
+These numpy arrays are feeded in batches using generator to CNN Model.<br />
 
 
 
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Siddharth Bhonge** - *Parser /Model* - https://github.com/siddharthbhonge
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+* https://github.com/yuesOctober/GDCproject/tree/yue
