@@ -1,7 +1,7 @@
 # miRNA Sequences to predict Primary Site/Origin of Cancer
-```
-The miRNA expression quantification data is used https://gdc.cancer.gov/about to predict site of origin of the disease.
-```
+
+<br />The miRNA expression quantification data is used https://gdc.cancer.gov/about to predict site of origin of the disease.
+
 
 
 ## Getting Started
@@ -61,8 +61,9 @@ e.g. ./~/Downloads/gdc-client –m ~/Downloads/gdc_manifest.2018-08-23.txt<br />
 ./<path-to-gdc-client>/gdc-client download <id>
 e.g. ./gdc-client download fa63ce14-b9b5-4041-9df7-3b86ba9ede16 
 ```
-<br />
+
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/3.png)
+
 2.Use parse_file_case_id.py to extract file and case ID's for further use.<br />
 
 3.Download the JSON format of the Data from the same website.Use parser.py for for parsing the data into labels and data.<br />
