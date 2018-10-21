@@ -104,7 +104,7 @@ Example of Sparse Distribution:
 
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_2.png)
 
-Distribution after threshold:
+Distribution after threshold:(26 classes only )
 
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_3.png)
 
