@@ -93,7 +93,7 @@ These numpy arrays are feeded in batches using generator to CNN Model.<br />
 
 
 As the the distribution of classes is uneven,we put a hard threshold of 100.<br/>
-We excluded classes with less than 100 samples.<br />
+We excluded classes with less than 500 samples.<br />
 Feel free to change the threshold as per your model.<br />
 
 Distribution before threshold:
@@ -104,10 +104,24 @@ Example of Sparse Distribution:
 
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_2.png)
 
-Distribution after threshold:(26 classes only )
+Distribution after threshold:(5 classes only )
 
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_3.png)
 
+
+CNN Architecture:
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/arch.png)
+
+Results with CNN:
+
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/CNN_output.png)
+
+Result with SVM:
+
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/SVM_output.png)
+
+As you see simple classifier with SVM or even CNN do not work.As next step we need to analyze the data more.The basic problem is that we have only 3557 samples for these 5 classes ,each with 1881 input parameters.This is very hard to converge.<br />
+Selecting only some of these factors and probably increasing the depth of CNN may be the next steps.
 
 ## Authors
 
