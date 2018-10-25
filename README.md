@@ -104,10 +104,13 @@ Example of Sparse Distribution:
 
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_2.png)
 
-Distribution after threshold:(5 classes only )
+Distribution after threshold 100:(26 classes only )
 
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_3.png)
 
+Distribution after threshold 500:(5 classes only )
+
+![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/Figure_4.png)
 
 CNN Architecture:
 ![alt text](https://github.com/siddharthbhonge/machine_learning_for_cancer_research/blob/master/images/arch.png)
